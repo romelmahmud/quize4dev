@@ -10,9 +10,9 @@ const NavBar = () => {
   };
   return (
     <div className="bg-slate-900 h-24 text-white ">
-      <div className="mx-auto max-w-6xl px-4 flex justify-between items-center h-full">
+      <div className="mx-auto max-w-6xl px-6 md:px-5  flex justify-between items-center h-full">
         <Link to="/home" className="font-extrabold text-3xl text-green-500 ">
-          Quiz 4 Dev
+          Quiz 4 Dev_
         </Link>
         <div className="md:hidden">
           {open && (
