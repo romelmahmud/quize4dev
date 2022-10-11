@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
+import { Bars3Icon } from "@heroicons/react/24/solid";
 
 const NavBar = () => {
   let activeStyle = {
@@ -11,7 +12,10 @@ const NavBar = () => {
         <Link to="/home" className="font-extrabold text-3xl text-green-500 ">
           Quiz 4 Dev
         </Link>
-        <nav>
+        <div>
+          <Bars3Icon className="h-8 w-8 hover:text-green-500 cursor-pointer md:hidden" />
+        </div>
+        <nav className="hidden md:block">
           <NavLink
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             className="ml-6 text-xl  font-semibold hover:text-green-500 transition-all delay-100 ease-in-out"
