@@ -15,14 +15,17 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
       },
       {
         path: "home",
         element: <Home />,
+        loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
       },
       {
         path: "topics",
         element: <Topics />,
+        loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
       },
       {
         path: "blog",
