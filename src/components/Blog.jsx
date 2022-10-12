@@ -2,8 +2,8 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <div className="bg-slate-800 min-h-screen p-12">
-      <div className="mx-auto max-w-6xl px-6 md:px-5 ">
+    <div className="bg-slate-800 min-h-screen p-6 md:p-12 ">
+      <div className="mx-auto max-w-6xl px-2  md:px-5 ">
         <div className="bg-slate-700 p-6 rounded">
           <h2 className="text-white text-3xl font-semibold mb-4">
             What is purpose of react router?
@@ -21,7 +21,7 @@ const Blog = () => {
           </p>
         </div>
         <div className="bg-slate-700 p-6 rounded my-8">
-          <h2 className="text-white text-3xl font-semibold mb-4">
+          <h2 className="text-white text-2xl md:text-3xl font-semibold mb-4">
             How does Context Api works?
           </h2>
           <p className="text-white text-xl">
