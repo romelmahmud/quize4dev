@@ -46,17 +46,25 @@ const SingleQuiz = ({ questionData }) => {
             {parsedQuestion}
           </div>
           <EyeIcon
+            onClick={() => setShowAnswer(!showAnswer)}
             className={`h-8 w-8 cursor-pointer hover:text-green-500 transition-all duration-300 ease-in-out ${
               showAnswer ? "text-green-500" : "text-gray-500"
             }`}
           />
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-5">
-          {options.map((option, index) => (
-            <Option key={index} option={option} inputHandler={inputHandler} />
-          ))}
-        </div>
+        {showAnswer && (
+          <p className=" text-xl text-white font-medium mt-4">
+            <span className="text-green-500">Correct Answer: </span>
+            {correctAnswer}
+          </p>
+        )}{" "}
+        {!showAnswer && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-5">
+            {options.map((option, index) => (
+              <Option key={index} option={option} inputHandler={inputHandler} />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
