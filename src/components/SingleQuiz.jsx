@@ -39,7 +39,7 @@ const SingleQuiz = ({ questionData }) => {
 
   const parsedQuestion = parse(question);
   return (
-    <div className="border-2 border-slate-700 p-6 my-5">
+    <div className="border-2 border-slate-700 p-6 my-5 rounded">
       <div>
         <div className="flex justify-between items-center">
           <div className="text-white text-2xl font-semibold w-3/4">
