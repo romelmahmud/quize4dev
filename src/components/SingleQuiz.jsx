@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { EyeIcon } from "@heroicons/react/24/solid";
+import { toast } from "react-toastify";
+
 import parse from "html-react-parser";
 import Option from "./Option";
 
@@ -7,15 +9,31 @@ const SingleQuiz = ({ questionData }) => {
   const [inputValue, setInputValue] = useState("");
   const [showAnswer, setShowAnswer] = useState(false);
   const { question, options, correctAnswer } = questionData;
+  const didMountRef = useRef(false);
 
+  const successMessage = () => {
+    toast.success("Correct Answer !", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
+  const errorMessage = () => {
+    toast.error("Wrong Answer !!", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
   const inputHandler = (e) => {
     setInputValue(e.target.value);
   };
+
   useEffect(() => {
-    if (inputValue === correctAnswer) {
-      console.log("correct");
+    if (didMountRef.current) {
+      if (inputValue === correctAnswer) {
+        successMessage();
+      } else {
+        errorMessage();
+      }
     } else {
-      console.log("Wrong");
+      didMountRef.current = true;
     }
   }, [inputValue, correctAnswer]);
 

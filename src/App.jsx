@@ -1,3 +1,4 @@
+import { createContext } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -52,7 +53,8 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
+
       <ToastContainer />
     </>
   );

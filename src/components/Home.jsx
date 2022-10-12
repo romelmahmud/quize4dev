@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import Header from "./Header";
 import QuizContainer from "./QuizContainer";
