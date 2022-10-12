@@ -12,12 +12,12 @@ const SingleQuiz = ({ questionData }) => {
   const didMountRef = useRef(false);
 
   const successMessage = () => {
-    toast.success("Correct Answer !", {
+    toast.success("Correct Answer", {
       position: toast.POSITION.TOP_RIGHT,
     });
   };
   const errorMessage = () => {
-    toast.error("Wrong Answer !!", {
+    toast.error("Wrong Answer!!", {
       position: toast.POSITION.TOP_RIGHT,
     });
   };
